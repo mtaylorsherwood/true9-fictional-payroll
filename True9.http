@@ -1,0 +1,12 @@
+# True9
+
+###
+# @name Calculate Payment Date
+POST http://localhost:8001/api/calculatePaymentDate
+Accept: application/json
+Content-Type: application/json
+
+{
+    "month": "8",
+    "year": 2027
+}

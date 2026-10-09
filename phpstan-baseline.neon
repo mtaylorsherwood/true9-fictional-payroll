@@ -1,0 +1,19 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Static call to instance method Carbon\\Carbon\:\:isWeekend\(\)\.$#'
+			identifier: method.staticCall
+			count: 1
+			path: app/Models/User.php
+
+		-
+			message: '#^Static call to instance method Carbon\\Traits\\Date\:\:startOfWeek\(\)\.$#'
+			identifier: method.staticCall
+			count: 1
+			path: app/Models/User.php
+
+		-
+			message: '#^Parameter \#2 \$string of function explode expects string, bool\|string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: config/sanctum.php

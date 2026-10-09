@@ -1,0 +1,18 @@
+services:
+    app:
+        build:
+            context: .
+            dockerfile: docker/Dockerfile
+        ports:
+            - '${APP_PORT:-8001}:8000'
+            - '${VITE_PORT:-5174}:${VITE_PORT:-5174}'
+        environment:
+            VITE_PORT: '${VITE_PORT:-5174}'
+        volumes:
+            - .:/var/www/true9-fictional-payroll
+            - node_modules:/var/www/true9-fictional-payroll/node_modules
+            - vendor:/var/www/true9-fictional-payroll/vendor
+
+volumes:
+    node_modules:
+    vendor:
